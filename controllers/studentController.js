@@ -4,7 +4,7 @@ const { Student, Course } = require('../models');
 const headCount = async () =>
   Student.aggregate([
     {
-      $count: "first"
+      $count: "students" // this is simply a naming convention, $count is applied to the model it is within no whats after :
     }
   ]).then((numberOfStudents) => numberOfStudents);
 
